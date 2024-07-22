@@ -31,8 +31,8 @@ class Embeddings:
     Otherwise, embeddings are just loaded from the file previously created file. 
     '''
     def __init__(self, doc_file_name):
-        self.EMB_MODEL_NAME = 'all-MiniLM-L6-v2'
-        self.model = SentenceTransformer(self.EMB_MODEL_NAME)
+        self.emb_model_name = 'all-MiniLM-L6-v2'
+        self.model = SentenceTransformer(self.emb_model_name)
         self.doc_file_name = doc_file_name
         self.client = chromadb.EphemeralClient() 
         self.collection_name = "embeddings"
@@ -138,12 +138,5 @@ async def get_response(query: Query):
 
 
 if __name__ == "__main__":
-    if 0:
-        query = "Why can't we sell products in Italy and Germany?"
-        ret_documents = rag.retrieve_documents(query)
-        response = rag.generate_response(ret_documents, query)
-        fresponse = rag.format_response(ret_documents, response)
-        print(fresponse)
-    else:
-        import uvicorn
-        uvicorn.run(app, host="0.0.0.0", port=8000)
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
