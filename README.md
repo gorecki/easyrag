@@ -8,6 +8,7 @@ Develop a simple Retrieval-Augmented Generation (RAG) application that integrate
 - FastAPI
 - Uvicorn
 - OpenAI API key
+- Chroma DB
 
 ## Setup Instructions
 
