@@ -1,0 +1,6 @@
+POST http://127.0.0.1:8000/query
+Content-Type: application/json
+
+{
+  "user_input": "Why can't we sell products in Italy and Spain?"
+}
