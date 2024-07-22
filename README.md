@@ -125,3 +125,17 @@ openai
 sentence-transformers
 chromadb==0.5.3
 ```
+
+## Limitations
+
+1. **Embeddings Model Choice:**
+   - The 'all-MiniLM-L6-v2' model has been used for generating embeddings due to its balance of performance and computational efficiency, making it suitable for many practical applications.
+
+2. **LLM Selection:**
+   - OpenAI's 'gpt-4o-mini' model was chosen for its favorable performance-to-cost ratio. Other models, such as those highlighted in the Chatbot Arena [leaderboard](https://chat.lmsys.org/?leaderboard), could also be considered based on specific requirements and budget constraints.
+
+3. **Document Splitting:**
+   - Splitting the retrieved document by '\n\n' is an ad hoc approach and could be refined further to ensure better segmentation and contextual relevance of the extracted paragraphs.
+
+4. **Retrieval Results:**
+   - The parameter `n_results=3` used during document retrieval is also an ad hoc choice. This setting could be optimized based on the application's specific needs and performance criteria.
