@@ -26,9 +26,7 @@ def load_text_file(path):
 
 class Embeddings:
     ''' 
-    Prepares embeddings for the given document using a predefined model and saves it to a predefined 
-    file if the file does not exist yet. 
-    Otherwise, embeddings are just loaded from the file previously created file. 
+    Prepares embeddings for the given document using a predefined model.
     '''
     def __init__(self, doc_file_name):
         self.emb_model_name = 'all-MiniLM-L6-v2'
