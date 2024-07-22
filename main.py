@@ -38,9 +38,11 @@ class Embeddings:
 
     def prepare(self):
         self.document = load_text_file(self.doc_file_name)
+
+        # Split the document to paragraphs
         self.paragraphs = self.document.split("\n\n")
 
-        # Split the document
+        # Embed the paragraphs
         embeddings = self.model.encode(self.paragraphs)
 
         # Add embeddings to Chroma DB
